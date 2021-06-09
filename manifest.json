@@ -1,8 +1,13 @@
 {
   "name": "Twitter ENS Tipper",
-  "description": "Tip people on Twitter with ENS usernames",
-  "version": "1.0",
+  "description": "Tip people on Twitter with ENS usernames. Created by @yungwknd https://github.com/yungwknd/twitterenstipper",
+  "version": "0.1",
   "manifest_version": 3,
+	"icons": {
+		"16": "twitterenstipper_16x16.png",
+		"48": "twitterenstipper_48x48.png",
+		"128": "twitterenstipper_128x128.png"
+	},
 	"content_scripts": 
 	[
 		{
@@ -18,5 +23,5 @@
 			"matches": ["https://twitter.com/*"]
 		}
 	],
-  "permissions": ["storage", "activeTab", "tabs", "scripting"]
+  "permissions": ["activeTab", "scripting"]
 }
