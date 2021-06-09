@@ -32,7 +32,7 @@ setTimeout(async function () {
         const node = element.childNodes[j];
         const username = node.textContent;
 
-        if (username?.includes(".eth")) {
+        if (username?.toLowerCase().includes(".eth")) {
           const newDiv = document.createElement('div')
           const newA = document.createElement('a')
           const newDiv2 = document.createElement('div')
