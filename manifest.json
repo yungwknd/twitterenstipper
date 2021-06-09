@@ -1,0 +1,22 @@
+{
+  "name": "Twitter ENS Tipper",
+  "description": "Tip people on Twitter with ENS usernames",
+  "version": "1.0",
+  "manifest_version": 3,
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://twitter.com/*"],
+			"js": ["ethers.js", "detect_provider.js", "script.js"],
+			"run_at": "document_end",
+			"all_frames": true
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["ethers.js", "detect_provider.js", "content_script.js"],
+			"matches": ["https://twitter.com/*"]
+		}
+	],
+  "permissions": ["storage", "activeTab", "tabs", "scripting"]
+}
